@@ -1,0 +1,16 @@
+# Demo configuration for the vision-guided robot sorting system
+
+camera:
+  device: 0
+  resolution: [1280, 720]
+vision:
+  model: "resnet50"
+  threshold: 0.5
+robot:
+  arm: "UR5"
+  workspace: "default"
+sorting:
+  categories:
+    - red
+    - blue
+    - green

@@ -1,51 +1,52 @@
 # Vision guided robot sorting
 
-This repository contains the project files, source code, and usage instructions for a vision-guided robot sorting system. The content is organized for developers and practitioners who want to inspect, reproduce, or build on the project.
+# Vision guided robot sorting
+
+This repository contains the project files for a vision-guided robot sorting system. It is structured for developers who want a clean starting point for perception, planning, and robotics integration.
 
 ## Overview
 
-A concise description of the project, focusing on functionality and implementation rather than academic context. The project provides:
+The repository is built around a mobile robot sorting workflow:
 
-- A vision module that detects and classifies objects in the workspace.
-- A planning module that computes pick-and-place targets.
-- Control scripts for integrating perception with a robot manipulator for automated sorting.
+- Vision: detect and classify objects from camera input.
+- Planning: compute sorting targets and pick-and-place assignments.
+- Execution: connect the perception pipeline to robotic motion control.
 
 ## Quick start
 
 1. Clone the repository:
 
-   git clone <repo-url>
+   git clone https://github.com/uuganbadrakh-git/Vision-guided-robot-sorting.git
    cd Vision-guided-robot-sorting
 
-2. Inspect the `src/` folder for code and the `models/` folder for trained models (if included).
+2. Create and activate a virtual environment:
 
-3. Example: run a demo (replace with actual script name):
+   python3 -m venv venv
+   source venv/bin/activate
+   pip install -r requirements.txt
+
+3. Run the demo scaffold:
 
    python3 src/demo.py --config config/demo.yaml
 
 ## Project structure
 
-- `src/` — source code and modules
-- `models/` — trained model files (optional)
-- `data/` — sample images or datasets (optional)
-- `scripts/` — utilities and helper scripts
-- `docs/` — usage notes and diagrams (optional)
+- `src/` — basic code scaffold and demo entrypoint
+- `config/` — example configuration files
+- `requirements.txt` — Python dependencies for vision and robotics workflows
+- `vision-guided-robot-sorting.pdf` — imported project document
+- `LICENSE` — MIT license
 
-## Running and testing
+## Usage
 
-- Install dependencies (example using pip):
+The demo runner is a placeholder for the actual system entrypoint. Replace `src/demo.py` with your main application script and extend the `src/` package as needed.
 
-  python3 -m venv venv
-  source venv/bin/activate
-  pip install -r requirements.txt
+## Extend this project
 
-- Run unit tests (if present):
-
-  pytest
-
-## Contributing
-
-Contributions and improvements are welcome. Open issues or pull requests with clear descriptions and test cases.
+- Add camera and sensor drivers under `src/`.
+- Put vision model definitions in `src/vision`.
+- Add planner and robot controllers in `src/robot`.
+- Use `models/` and `data/` folders for model weights and test datasets.
 
 ## License
 
