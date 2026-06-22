@@ -1,0 +1,22 @@
+.DS_Store
+
+# Python
+__pycache__/
+*.pyc
+venv/
+
+# Models and large data
+models/
+data/
+
+# Logs and outputs
+*.log
+output/
+
+# LaTeX and build artifacts
+*.aux
+*.log
+*.pdf
+
+# Editor folders
+.vscode/
